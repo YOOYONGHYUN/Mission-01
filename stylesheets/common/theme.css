@@ -1,0 +1,9 @@
+/* Theme 스타일 작성 */
+body {
+  --red: #e52330;
+  --blue: #0096e4;
+  --black: #181818;
+  --white: #ffffff;
+  --gray: #c4c4c4;
+  --green: #c7cd1d;
+}

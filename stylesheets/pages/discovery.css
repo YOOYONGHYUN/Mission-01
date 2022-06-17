@@ -10,6 +10,10 @@ body > header {
   margin-bottom: 70px;
 }
 
+header h4 {
+  color: var(--gray);
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -158,11 +162,12 @@ a:focus > div {
   border: 1px solid var(--blue);
 }
 
-/* .box_container:hover {
-  border: 1px solid var(--blue);
-} */
-
 a:hover > button {
+  background-color: var(--blue);
+  width: 112px;
+}
+
+a:focus > button {
   background-color: var(--blue);
   width: 112px;
 }
@@ -170,6 +175,15 @@ a:hover > button {
 a:hover > button::before {
   content: "구매하기";
   color: var(--white);
+  margin-left: 1px;
+  font-size: 12px;
+}
+
+a:focus > button::before {
+  content: "구매하기";
+  color: var(--white);
+  margin-left: 1px;
+  font-size: 12px;
 }
 
 .img_container {

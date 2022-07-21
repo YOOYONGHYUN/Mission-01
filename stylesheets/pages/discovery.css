@@ -35,25 +35,29 @@ section > main {
   margin-top: 24px;
 }
 
-.first_box div {
+.first_box {
+  position: relative;
+}
+
+.first_img_container {
   float: left;
+  position: relative;
   margin-bottom: 20px;
   width: 502px;
   height: 310px;
 }
 
 .first_box_img {
+  width: 502px;
+  height: 310px;
   border: 1px solid var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .first_box div:first-child {
   margin-right: 16px;
-}
-
-.first_box_img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .first_box_img img {
@@ -61,16 +65,13 @@ section > main {
   height: 270px;
 }
 
-.second_box div {
+.second_img_container {
   float: left;
+  position: relative;
   width: 243px;
   height: 310px;
   margin-right: 16px;
   margin-bottom: 16px;
-}
-
-.second_box > div {
-  border: 1px solid var(--gray);
 }
 
 .second_box div:last-child {
@@ -78,6 +79,9 @@ section > main {
 }
 
 .second_box_img {
+  width: 243px;
+  height: 310px;
+  border: 1px solid var(--gray);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,13 +92,10 @@ section > main {
   height: 282px;
 }
 
-.third_box div {
+.third_img_container {
+  position: relative;
   float: left;
   margin-right: 16px;
-}
-
-.third_box > div {
-  border: 1px solid var(--gray);
 }
 
 .third_box > div:first-child {
@@ -117,6 +118,7 @@ section > main {
 }
 
 .third_box_img {
+  border: 1px solid var(--gray);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,19 +141,18 @@ section > main {
   height: 270px;
 }
 
-button {
+.arrow {
   display: flex;
   justify-content: center;
-  align-items: center;
   position: absolute;
   width: 42px;
   height: 42px;
   background-color: var(--gray);
   border: 0px;
-  position: absolute;
   top: 248px;
   left: 20px;
   opacity: 90%;
+  transition: background-color 1.5s;
 }
 
 a:hover > div {
@@ -162,28 +163,32 @@ a:focus > div {
   border: 1px solid var(--blue);
 }
 
-a:hover > button {
-  background-color: var(--blue);
+.img_link:hover .arrow {
   width: 112px;
+  background-color: var(--blue);
 }
 
-a:focus > button {
-  background-color: var(--blue);
+.img_link:focus .arrow {
   width: 112px;
+  background-color: var(--blue);
 }
 
-a:hover > button::before {
+.img_link:hover .arrow::before {
   content: "구매하기";
   color: var(--white);
   margin-left: 1px;
+  margin-top: 12.5px;
   font-size: 12px;
+  font-weight: 500;
 }
 
-a:focus > button::before {
+.img_link:focus .arrow::before {
   content: "구매하기";
   color: var(--white);
   margin-left: 1px;
+  margin-top: 12.5px;
   font-size: 12px;
+  font-weight: 500;
 }
 
 .img_container {
